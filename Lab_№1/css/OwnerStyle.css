@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.main {
+    display: flex; 
+    height: 100vh; 
+}
+
+.CenterSide {
+    flex: 7; 
+    background-color: #3f3f3f; 
+    padding: 20px; 
+    text-align: center;
+    justify-content: auto;
+}
+
+.RightSide {
+    flex: 1; 
+    background-color: #686767; 
+    padding: 20px; 
+    text-align:justify; 
+    overflow: hidden 
+}
+
+.footer {
+    background-color: #222121; 
+    text-align: left; 
+    padding: 10px; 
+}
+
+/* Right block Components */
+.centered-image-RightBlock {
+    max-width: 100%; 
+    max-height: 300px; 
+    height: auto; 
+    width: auto; 
+    margin-bottom: 10px; 
+}
+
+/* Center Block Components*/
+
+.Header-Center-Block {
+    font-size: 60px;
+}
+.Header-Center-Block-2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.centered-list {
+    list-style-type: disc; 
+    padding-left: 0; 
+    display: inline-block; 
+    margin-top: 0;
+}
+    
+.centered-list li {
+    margin-bottom: 10px; 
+    font-size: 2.0em;
+}
+
+.centered-list li a {
+    text-decoration: none; 
+    color: #000; 
+    font-size: 32px;
+}
+
+.image-row {
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    margin-top: 100px; 
+}   
+
+.image-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-right {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.image-left {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+
+/* Footer Block Components */
+.footer-list {
+    padding-left: 0; 
+}
+
+@font-face {
+    font-family: 'OwnerFont'; 
+    src: url('Fonts/Patrizia-Regular.ttf') format('truetype'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+h1 {
+    font-family: 'OwnerFont', sans-serif; 
+}   

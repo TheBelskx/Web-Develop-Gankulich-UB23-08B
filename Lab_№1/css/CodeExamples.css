@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.main {
+    max-width: 800px;
+    margin: auto;
+}
+
+h1, h2 {
+    text-align: center; 
+}
+
+pre {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.keyword {
+    color: blue;
+    font-weight: bold;
+}
+
+.string {
+    color: green;
+}
+
+.comment {
+    color: gray;
+    font-style: italic; 
+}
+
+.number {
+    color: red;
+}
+
+
+.code-examples {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+.code-examples li {
+    position: relative; 
+    padding-left: 30px; 
+}
+
+.code-examples li::before {
+    content: ""; 
+    position: absolute; 
+    left: 0; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 20px; 
+    height: 20px; 
+    background-image: url('Image/FooterBlock_Marker.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+}
+
+@font-face {
+    font-family: 'OwnerFont'; 
+    src: url('Fonts/Patrizia-Regular.ttf') format('truetype'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+h1 {
+    font-family: 'OwnerFont', sans-serif; 
+}   

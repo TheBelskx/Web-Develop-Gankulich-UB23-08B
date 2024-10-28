@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeExamples</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/CodeExamples.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Примеры кода на C++</h1>
+
+        <ul class="code-examples">
+            <li>
+                <h2>Пример 1: Hello World</h2>
+                <pre><code><span class="keyword">#include</span> &lt;iostream&gt;
+
+<span class="keyword">int</span> main() {
+    <span class="keyword">std::cout</span> &lt;&lt; <span class="string">"Hello, World!"</span> &lt;&lt; <span class="keyword">std::endl</span>;
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+            </li>
+            <li>
+                <h2>Пример 2: Сложение двух чисел</h2>
+                <pre><code><span class="keyword">#include</span> &lt;iostream&gt;
+
+<span class="keyword">int</span> main() {
+    <span class="keyword">int</span> a, b;
+    <span class="keyword">std::cout</span> &lt;&lt; <span class="string">"Введите два числа: "</span>;
+    <span class="keyword">std::cin</span> &gt;&gt; a &gt;&gt; b;
+    <span class="keyword">std::cout</span> &lt;&lt; <span class="string">"Сумма: "</span> &lt;&lt; (a + b) &lt;&lt; <span class="keyword">std::endl</span>;
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+            </li>
+            <li>
+                <h2>Пример 3: Функция факториала</h2>
+                <pre><code><span class="keyword">#include</span> &lt;iostream&gt;
+
+<span class="keyword">int</span> factorial(<span class="keyword">int</span> n) {
+    <span class="keyword">return</span> (n == <span class="number">1</span> || n == <span class="number">0</span>) ? <span class="number">1</span> : factorial(n - <span class="number">1</span>) * n;
+}
+
+<span class="keyword">int</span> main() {
+    <span class="keyword">int</span> num;
+    <span class="keyword">std::cout</span> &lt;&lt; <span class="string">"Введите число: "</span>;
+    <span class="keyword">std::cin</span> &gt;&gt; num;
+    <span class="keyword">std::cout</span> &lt;&lt; <span class="string">"Факториал: "</span> &lt;&lt; factorial(num) &lt;&lt; <span class="keyword">std::endl</span>;
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
