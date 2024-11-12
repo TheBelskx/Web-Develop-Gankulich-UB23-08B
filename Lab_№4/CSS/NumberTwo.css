@@ -1,0 +1,98 @@
+body {
+    background-color: #222;
+    color: #eee;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+}
+
+.hour-hand {
+    width: 6px;
+    height: 70px;
+    background-color: #ffe600;
+    border-radius: 2px;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+.minute-hand {
+    width: 4px;
+    height: 100px;
+    background-color: #ffe600;
+    border-radius: 2px;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+.second-hand {
+    width: 2px;
+    height: 120px;
+    background-color: red;
+    border-radius: 2px;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+.center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #ffe600;
+    border-radius: 50%;
+}
+
+@keyframes rotate-hour {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+@keyframes rotate-minute {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+@keyframes rotate-second {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+.hour-hand {
+    animation: rotate-hour 12h linear infinite;
+}
+
+.minute-hand {
+    animation: rotate-minute 60min linear infinite;
+}
+
+.second-hand {
+    animation: rotate-second 60s linear infinite;
+}
