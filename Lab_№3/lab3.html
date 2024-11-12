@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация авто для продажи</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <form class="registration-form">
+            <h2>Регистрация автомобиля для продажи</h2>
+
+            <label for="car-make">Марка автомобиля:</label>
+            <input type="text" id="car-make" name="car-make" placeholder="Введите марку" required>
+
+            <label for="car-model">Модель автомобиля:</label>
+            <input type="text" id="car-model" name="car-model" placeholder="Введите модель" required>
+
+            <label for="year">Год выпуска:</label>
+            <input type="number" id="year" name="year" min="1900" max="2023" required>
+
+            <label for="mileage">Пробег (км):</label>
+            <input type="number" id="mileage" name="mileage" required>
+
+            <label for="price">Цена (руб.):</label>
+            <input type="text" id="price" name="price" placeholder="Введите цену" required>
+
+            <label for="description">Описание:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <label for="contact">Контактный номер:</label>
+            <input type="tel" id="contact" name="contact" placeholder="+7 (___) ___-__-__" required>
+
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" name="email" placeholder="Введите вашу почту" required>
+
+            <button type="submit">Зарегистрировать авто</button>
+        </form>
+    </div>
+</body>
+</html> 
