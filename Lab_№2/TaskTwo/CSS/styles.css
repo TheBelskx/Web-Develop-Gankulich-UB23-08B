@@ -1,0 +1,52 @@
+
+/* Внутренний элемент с цветом */
+.inner {
+    width: calc(100% - 30px); 
+    height: calc(100% - 30px); 
+    margin: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Установка индивидуальных цветов для каждого блока */
+.item--1 .inner { background-color: #CD5C5C; } 
+.item--2 .inner { background-color: #DC143C; } 
+.item--3 .inner { background-color: #8B0000; } 
+.item--4 .inner { background-color: #FFC0CB; } 
+.item--5 .inner { background-color: #FF69B4; } 
+.item--6 .inner { background-color: #C71585; } 
+.item--7 .inner { background-color: #32CD32; } 
+.item--8 .inner { background-color: #00FA9A; } 
+.item--9 .inner { background-color: #ADFF2F; } 
+.item--10 .inner { background-color: #2E8B57; } 
+.item--11 .inner { background-color: #006400; } 
+.item--12 .inner { background-color: #9ACD32; } 
+.item--13 .inner { background-color: #808000; } 
+.item--14 .inner { background-color: #00FF00; } 
+.item--15 .inner { background-color: #FFA07A; } 
+.item--16 .inner { background-color: #FF4500; } 
+.item--17 .inner { background-color: #FFA500; } 
+.item--18 .inner { background-color: #BC8F8F; } 
+.item--19 .inner { background-color: #F4A460; } 
+.item--20 .inner { background-color: #D2691E; } 
+.item--21 .inner { background-color: #8B4513; } 
+.item--22 .inner { background-color: #A52A2A; } 
+.item--23 .inner { background-color: #800000; } 
+
+@media (max-width: 768px) {
+    .inner {
+        width: calc(100% - 15px); 
+        height: calc(100% - 15px); 
+        margin: 8px; 
+    }
+}
+
+@media (max-width: 320px) {
+    .inner {
+        width: calc(100% - 15px); 
+        height: calc(100% - 15px); 
+        margin: 2px; 
+    }
+}
