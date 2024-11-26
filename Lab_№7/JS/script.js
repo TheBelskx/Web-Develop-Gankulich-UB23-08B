@@ -1,53 +1,102 @@
-let currentValue = "0";
-let operator = null;
+let displayValue = "0";
+let pendingOperator = null;
+let prevNumber = null;
+
+function updateDisplay() {
+  document.getElementById("display").value = displayValue;
+}
 
 function appendNumber(num) {
-  if (currentValue === "0") {
-    currentValue = num;
+  if (displayValue === "0") {
+    displayValue = num;
   } else {
-    currentValue += num;
+    displayValue += num;
   }
-  document.getElementById("display").value = currentValue;
+  updateDisplay();
 }
+
 
 function appendOperator(op) {
-  operator = op;
-  currentValue += op;
-  document.getElementById("display").value = currentValue;
+  if (pendingOperator) {
+    calculate();
+  }
+  prevNumber = displayValue;
+  pendingOperator = op;
+  displayValue = "0";
+  updateDisplay();
 }
 
-function calculate(op) {
-    try{
-        let result = eval(currentValue); // Не очень безопасный вариант. Используйте библиотеки mathjs для безопасных вычислений.
-        currentValue = result.toString();
-        document.getElementById("display").value = currentValue;
-        operator = null;
-    }catch(e){
-        document.getElementById("display").value = "Error";
-        currentValue = "0";
-    }
+function calculate() {
+  const num1 = parseFloat(prevNumber);
+  const num2 = parseFloat(displayValue);
+  switch (pendingOperator) {
+    case '+':
+      displayValue = (num1 + num2).toString();
+      break;
+    case '-':
+      displayValue = (num1 - num2).toString();
+      break;
+    case '*':
+      displayValue = (num1 * num2).toString();
+      break;
+    case '/':
+      if (num2 === 0) {
+        displayValue = "Error: Division by zero";
+      } else {
+        displayValue = (num1 / num2).toString();
+      }
+      break;
+  }
+  pendingOperator = null;
+  prevNumber = null;
+  updateDisplay();
 }
 
-
-function clearAll() {
-  currentValue = "0";
-  document.getElementById("display").value = currentValue;
-  operator = null;
+function clearDisplay() {
+  displayValue = "0";
+  pendingOperator = null;
+  prevNumber = null;
+  updateDisplay();
 }
 
 function clearEntry() {
-  currentValue = "0";
-  document.getElementById("display").value = currentValue;
+  displayValue = "0";
+  updateDisplay();
 }
 
 function backspace() {
-  currentValue = currentValue.slice(0, -1) || "0"; //Учитываем случай, когда очищается всё
-  document.getElementById("display").value = currentValue;
+  displayValue = displayValue.slice(0, -1) || "0";
+  updateDisplay();
 }
 
 function negate() {
-  currentValue = (-parseFloat(currentValue)).toString();
-  document.getElementById("display").value = currentValue;
+  displayValue = (-parseFloat(displayValue)).toString();
+  updateDisplay();
+}
+
+function sqrt() {
+  const num = parseFloat(displayValue);
+  if (num < 0) {
+    displayValue = "Error: Cannot calculate square root of a negative number";
+  } else {
+    displayValue = Math.sqrt(num).toString();
+  }
+  updateDisplay();
+}
+
+function inverse() {
+  const num = parseFloat(displayValue);
+  if (num === 0) {
+    displayValue = "Error: Division by zero";
+  } else {
+    displayValue = (1 / num).toString();
+  }
+  updateDisplay();
+}
+
+function percent() {
+  displayValue = (parseFloat(displayValue) / 100).toString();
+  updateDisplay();
 }
 
 function showGreeting() {

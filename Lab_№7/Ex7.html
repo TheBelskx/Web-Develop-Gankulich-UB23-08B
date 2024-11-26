@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Lab_№7 - Калькулятор</title>
-<link rel="stylesheet" href="CSS/styles.css">
-</head>
-<body>
-<div class="calculator">
-  <div class="display">
-    <input type="text" id="display" readonly>
-  </div>
-  <div class="buttons">
-    <button class="operator" onclick="clearAll()">C</button>
-    <button class="operator" onclick="clearEntry()">CE</button>
-    <button class="operator" onclick="backspace()">&larr;</button>
-    <button class="operator" onclick="negate()">+/-</button>
-    <button class="operator" onclick="calculate('Math.sqrt(currentValue)')">&radic;</button>
-    <button class="operator" onclick="calculate('1/currentValue')">1/x</button>
-    <button class="operator" onclick="calculate('currentValue/100')">%</button>
-    <button class="operator" onclick="appendOperator('/')">/</button>
-    <button onclick="appendNumber('7')">7</button>
-    <button onclick="appendNumber('8')">8</button>
-    <button onclick="appendNumber('9')">9</button>
-    <button class="operator" onclick="appendOperator('*')">*</button>
-    <button onclick="appendNumber('4')">4</button>
-    <button onclick="appendNumber('5')">5</button>
-    <button onclick="appendNumber('6')">6</button>
-    <button class="operator" onclick="appendOperator('-')">-</button>
-    <button onclick="appendNumber('1')">1</button>
-    <button onclick="appendNumber('2')">2</button>
-    <button onclick="appendNumber('3')">3</button>
-    <button class="operator" onclick="appendOperator('+')">+</button>
-    <button onclick="appendNumber('0')">0</button>
-    <button onclick="appendNumber('.')">.</button>
-    <button class="equal" onclick="calculate('=')">=</button>
-  </div>
-  <div class="developer">
-      <p>TheBelskx</p>
-      <button onclick="showGreeting()">Приветствие</button>
-  </div>
-</div>
 
-<script src="JS/script.js"></script>
+<head>
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+  <div class="calculator">
+    <input type="text" id="display" readonly>
+    <div class="buttons">
+      <button class="special" onclick="clearDisplay()">C</button>
+      <button class="special" onclick="clearEntry()">CE</button>
+      <button class="special" onclick="backspace()">&larr;</button>
+      <button class="operator" onclick="appendOperator('/')">/</button><br>
+      <button onclick="appendNumber('7')">7</button>
+      <button onclick="appendNumber('8')">8</button>
+      <button onclick="appendNumber('9')">9</button>
+      <button class="operator" onclick="appendOperator('*')">*</button><br>
+      <button onclick="appendNumber('4')">4</button>
+      <button onclick="appendNumber('5')">5</button>
+      <button onclick="appendNumber('6')">6</button>
+      <button class="operator" onclick="appendOperator('-')">-</button><br>
+      <button onclick="appendNumber('1')">1</button>
+      <button onclick="appendNumber('2')">2</button>
+      <button onclick="appendNumber('3')">3</button>
+      <button class="operator" onclick="appendOperator('+')">+</button><br>
+      <button onclick="appendNumber('0')">0</button>
+      <button onclick="appendNumber('.')">.</button>
+      <button class="operator" onclick="calculate()">=</button>
+      <button class="function" onclick="negate()">+/-</button><br>
+      <button class="function" onclick="sqrt()">√</button>
+      <button class="function" onclick="inverse()">1/x</button>
+      <button class="function" onclick="percent()">%</button>
+
+    </div>
+    <div class="developer">Developed by: TheBelskx</div>
+    <button onclick="showGreeting()">Greeting</button>
+  </div>
+
+  <script src="JS/script.js"></script>
 </body>
+
 </html>
