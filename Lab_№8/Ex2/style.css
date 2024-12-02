@@ -1,0 +1,34 @@
+.calendar {
+    width: 300px;
+    margin: 20px auto;
+    font-family: sans-serif;
+  }
+  
+  .calendar table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .calendar th, .calendar td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .calendar th {
+    background-color: #f0f0f0;
+  }
+  
+  .calendar .weekend {
+    background-color: #fdd; /* Светло-жёлтый для выходных */
+  }
+  
+  .calendar .holiday {
+    background-color: #ccf; /* Светло-голубой для праздников */
+    font-weight: bold;
+  }
+  
+  .calendar .holiday-name {
+    font-size: smaller;
+    display: block;
+  }
