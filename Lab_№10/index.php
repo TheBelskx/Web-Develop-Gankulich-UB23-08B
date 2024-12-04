@@ -11,7 +11,7 @@ require_once __DIR__ . "/header.php";
                 <p class="banner__text">На платформе представлены все проекты за <br> текующий год, начиная от простой TheSnake, <br>заканчивая онлайн играми RPG и TPS. Все игры <br> написаны на C++ в комбинации с Blueprints.  <br> Сайт сделан мной.</p>
                 <div class="banner-links-wrap">
                     <a href="project.php" class="btn-primary banner__link">Проекты</a>
-                    <a href="https://www.youtube.com/watch?v=UMvKpDjlKnA" target="_blank" class="btn-secondary banner__btn">Смотреть видео</a>
+                    <a href="#" target="_blank" class="btn-secondary banner__btn">Смотреть видео</a>
                 </div>
                 <div class="banner-features">
                     <span class="banner-features__text"><strong class="banner-features__text_strong">5+</strong>Главных игровых проектов</span>
