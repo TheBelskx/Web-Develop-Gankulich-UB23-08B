@@ -7,6 +7,9 @@ function updateDisplay() {
 }
 
 function appendNumber(num) {
+  if (num === '.' && displayValue.includes('.')) {
+    return; 
+  }
   if (displayValue === "0") {
     displayValue = num;
   } else {
