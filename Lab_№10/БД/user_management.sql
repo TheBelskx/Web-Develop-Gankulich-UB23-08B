@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: MySQL-8.0
--- Время создания: Дек 17 2024 г., 01:19
+-- Время создания: Дек 20 2024 г., 15:49
 -- Версия сервера: 8.0.35
 -- Версия PHP: 8.1.28
 
@@ -39,12 +39,12 @@ CREATE TABLE `projects` (
 --
 
 INSERT INTO `projects` (`id`, `title`, `img`, `link`) VALUES
-(7, 'MobWars', 'img/main/MobWars.jpg', 'https://gitlab.com/belsky.official/MobWars-Online'),
-(8, 'TopDownShooter', 'img/main/TopDownShooter.jpg', 'https://gitlab.com/belsky.official/Top-Down-Shooter'),
-(9, 'TheSnake', 'img/main/TheSnake.jpg', 'https://gitlab.com/belsky.official/20-Homework'),
-(10, 'TheArcanoid', 'img/main/Arcanoid.jpg', 'https://gitlab.com/belsky.official/TheFinal-Arcanoid'),
-(11, 'C++ Patterns', 'img/main/Patterns.jpg', 'https://gitlab.com/belsky.official/Middle-Module'),
-(12, 'Mobile Cliecker', 'img/main/ClieckerMobile.jpg', 'https://gitlab.com/belsky.official/Mobile-Clicker');
+(7, 'MobWars', 'img/main/MobWars.jpg', 'pdf/MobWars ТЗ.pdf'),
+(8, 'TopDownShooter', 'img/main/TopDownShooter.jpg', 'pdf/TopDownShooter ТЗ.pdf'),
+(9, 'TheSnake', 'img/main/TheSnake.jpg', 'pdf/Малые проекты ТЗ.pdf'),
+(10, 'TheArcanoid', 'img/main/Arcanoid.jpg', 'pdf/Малые проекты ТЗ.pdf'),
+(11, 'C++ Patterns', 'img/main/Patterns.jpg', 'pdf/Малые проекты ТЗ.pdf'),
+(12, 'Mobile Cliecker', 'img/main/ClieckerMobile.jpg', 'pdf/Малые проекты ТЗ.pdf');
 
 -- --------------------------------------------------------
 
